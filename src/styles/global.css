@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+.scroll-watcher {
+  height: 10px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: lime;
+  width: 100%;
+  scale: 0 1;
+  animation: scroll-watcher linear;
+  animation-timeline: scroll();
+}
+
+//this is cool, a simple animation based on scrool
+//this is simple to workds
+@keyframes scroll-watcher {
+  to { scale: 1 1; }
+}
