@@ -13,6 +13,11 @@ import Content from '../components/content.astro'
 		<title>Your Page Title | Brand Name</title>
 		<meta name="description" content="A compelling and keyword-rich description of your page content in 150-160 characters. This appears in search results.">
 
+		<!-- Font family -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
 		<!-- Open Graph Meta Tags (for social sharing) -->
 		<meta property="og:title" content="Your Page Title">
 		<meta property="og:description" content="A compelling description for social media sharing.">
@@ -43,7 +48,7 @@ import Content from '../components/content.astro'
 		<meta name="language" content="English">
 		<meta http-equiv="content-language" content="en-US">
 	</head>
-	<body>
+	<body class="inter-family">
 		<main class="w-full min-h-screen">
 			<div class="scroll-watcher" />
 			<Header />

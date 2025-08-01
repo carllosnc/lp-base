@@ -1,5 +1,23 @@
 @import "tailwindcss";
 
+@theme {
+  --color-deep-sea-50: #effaf6;
+  --color-deep-sea-100: #d7f4e7;
+  --color-deep-sea-200: #b2e8d2;
+  --color-deep-sea-300: #80d5b8;
+  --color-deep-sea-400: #4bbc9a;
+  --color-deep-sea-500: #29a080;
+  --color-deep-sea-600: #1a7f66;
+  --color-deep-sea-700: #156755;
+  --color-deep-sea-800: #135244;
+  --color-deep-sea-900: #114339;
+  --color-deep-sea-950: #082621;
+}
+
+.inter-family {
+  font-family: "Inter", sans-serif;
+}
+
 .scroll-watcher {
   height: 10px;
   position: fixed;
@@ -12,8 +30,6 @@
   animation-timeline: scroll();
 }
 
-//this is cool, a simple animation based on scrool
-//this is simple to workds
 @keyframes scroll-watcher {
   to { scale: 1 1; }
 }
@@ -23,3 +39,5 @@
 @custom-variant lg (@media (max-width: 1023px));
 @custom-variant md (@media (max-width: 767px));
 @custom-variant sm (@media (max-width: 639px));
+
+
