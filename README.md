@@ -1,6 +1,6 @@
 # LP-BASE
 
-> Astro boilerplate to make hight performant landing pages
+> Astro boilerplate to make high performing landing pages
 
 ### What's inside?
 
@@ -8,6 +8,13 @@
 - Astro Icons
 - Tailwind
 - React
+
+### Components
+
+[CTA Button](https://github.com/carllosnc/lp-base/blob/master/docs/cta-button.md)
+[Animated Number](https://github.com/carllosnc/lp-base/blob/master/docs/animated-number.md)
+[Infinite Slide](https://github.com/carllosnc/lp-base/blob/master/docs/infinite-slide.md)
+[Reveal](https://github.com/carllosnc/lp-base/blob/master/docs/reveal.md)
 
 ### Resources
 
