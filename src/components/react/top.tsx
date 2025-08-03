@@ -47,7 +47,7 @@ export function Top(){
       w-full fixed left-0 right-0 flex justify-center z-50
     `}>
       <div className={
-        `w-full bg-white/20 backdrop-blur-sm max-w-[998px] flex justify-between px-8 py-4
+        `w-full bg-white/20 backdrop-blur-sm max-w-[998px] flex justify-between px-5 py-4
         ${cls(isOpen, "h-screen bg-white/80 flex-col justify-start gap-[30px]")}`
       }>
         <div className={`
