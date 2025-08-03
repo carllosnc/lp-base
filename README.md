@@ -2,6 +2,10 @@
 
 > Astro boilerplate to make high performing landing pages
 
+```
+gh repo clone carllosnc/lp-base [site-name]
+```
+
 ### What's inside?
 
 - Astro
