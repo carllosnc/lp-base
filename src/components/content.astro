@@ -1,11 +1,116 @@
 ---
 import { Icon } from 'astro-icon/components'
+import { Reveal } from './react/reveal.tsx'
+import { InfiniteSlider } from './react/infinite-slider.tsx'
+import { AnimatedNumber } from './react/animated-number'
+import { CtaButton } from './react/cta-button'
 ---
 
-<section class="w-full h-[200px] bg-neutral-200 md:bg-deep-sea-500 min-h-[800px] flex items-center justify-center">
-
-  <div class="flex flex-col justify-center items-center text-center gap-[20px]">
+<section class="w-full py-[100px] bg-neutral-200 overflow-x-hidden md:bg-deep-sea-500 flex items-center justify-center">
+  <div class="flex flex-col justify-end items-center text-center gap-[20px]">
     <Icon class="text-[50px]" name="solar:stars-minimalistic-broken" />
-  </div>
 
+    <AnimatedNumber
+      client:load
+      start={0}
+      end={150}
+      duration={30}
+      className="text-[50px] font-bold text-blue-600"
+    />
+
+    <CtaButton
+      client:load
+      text="This is my CTA button"
+      onClick={() => console.log('clicked')}
+      gradientStartColor="#0000ff"
+      gradientMiddleColor="#00ffff"
+      gradientEndColor="#0000ff"
+    />
+
+    <div class="w-full max-w-[998px] bg-neutral-50 p-[10px]">
+      <InfiniteSlider
+        direction='right'
+        gap="gap-[10px]"
+        client:load
+        speed="normal">
+
+        <div class="px-8 py-4 bg-black text-white">
+          <span class="font-bold">Custom Component 1</span>
+        </div>
+
+        <div class="px-8 py-4 bg-black text-white">
+          <span class="font-bold">Custom Component 2</span>
+        </div>
+
+        <div class="px-8 py-4 bg-black text-white">
+          <span class="font-bold">Custom Component 3</span>
+        </div>
+
+        <div class="px-8 py-4 bg-black text-white">
+          <span class="font-bold">Custom Component 4</span>
+        </div>
+
+        <div class="px-8 py-4 bg-black text-white">
+          <span class="font-bold">Custom Component 5</span>
+        </div>
+
+        <div class="px-8 py-4 bg-black text-white">
+          <span class="font-bold">Custom Component 6</span>
+        </div>
+
+        <div class="px-8 py-4 bg-black text-white">
+          <span class="font-bold">Custom Component 7</span>
+        </div>
+      </InfiniteSlider>
+    </div>
+
+    <div class="w-full max-w-[998px] bg-neutral-50 p-[10px]">
+      <InfiniteSlider
+        direction='left'
+        gap="gap-[10px]"
+        client:load
+        speed="normal">
+
+        <div class="px-8 py-4 bg-black text-white">
+          <span class="font-bold">Custom Component 1</span>
+        </div>
+
+        <div class="px-8 py-4 bg-black text-white">
+          <span class="font-bold">Custom Component 2</span>
+        </div>
+
+        <div class="px-8 py-4 bg-black text-white">
+          <span class="font-bold">Custom Component 3</span>
+        </div>
+
+        <div class="px-8 py-4 bg-black text-white">
+          <span class="font-bold">Custom Component 4</span>
+        </div>
+
+        <div class="px-8 py-4 bg-black text-white">
+          <span class="font-bold">Custom Component 5</span>
+        </div>
+
+        <div class="px-8 py-4 bg-black text-white">
+          <span class="font-bold">Custom Component 6</span>
+        </div>
+
+        <div class="px-8 py-4 bg-black text-white">
+          <span class="font-bold">Custom Component 7</span>
+        </div>
+      </InfiniteSlider>
+    </div>
+
+    <Reveal delay={0} x={100} y={0} client:load>
+      <h1 class="font-bold text-4xl"> This is </h1>
+    </Reveal>
+
+    <Reveal delay={0.3} x={-100} y={0} client:load>
+      <h1 class="font-bold text-4xl"> A simple </h1>
+    </Reveal>
+
+    <Reveal delay={0.6} x={0} y={40} client:load>
+      <h1 class="font-bold text-4xl"> Reveal component </h1>
+    </Reveal>
+  </div>
 </section>
