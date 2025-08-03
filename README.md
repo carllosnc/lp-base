@@ -18,9 +18,9 @@
 
 ### Resources
 
-[SVG Patterns](https://pattern.monster/eyes-3)
-[Tailwind color generator](https://uicolors.app/generate/54523a)
-[Gradient generator](https://colortopia.vercel.app/)
+- [SVG Patterns](https://pattern.monster/eyes-3)
+- [Tailwind color generator](https://uicolors.app/generate/54523a)
+- [Gradient generator](https://colortopia.vercel.app/)
 
 ---
 
