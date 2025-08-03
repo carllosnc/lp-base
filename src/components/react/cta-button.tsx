@@ -3,7 +3,7 @@ import  { FiArrowRight } from "react-icons/fi"
 
 interface CtaButtonProps {
   text?: string
-  onClick?: () => void
+  href?: string
   gradientStartColor?: string
   gradientMiddleColor?: string
   gradientEndColor?: string
@@ -14,7 +14,7 @@ interface CtaButtonProps {
 
 export function CtaButton({
   text = "Get Started",
-  onClick,
+  href = "#",
   bgColor = "bg-white",
   textColor = "text-black",
   gradientStartColor = "#E2CBFF",
@@ -47,9 +47,11 @@ export function CtaButton({
   const currentSize = sizeClasses[size]
 
   return (
-    <button
-      className={`relative inline-flex ${currentSize.button} overflow-hidden rounded-full ${currentSize.padding} focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50`}
-      onClick={onClick}
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`relative inline-flex ${currentSize.button} overflow-hidden rounded-full ${currentSize.padding} focus:outline-none`}
     >
       <span
         className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--gradient-start)_0%,var(--gradient-middle)_50%,var(--gradient-end)_100%)]"
@@ -65,6 +67,6 @@ export function CtaButton({
         {text}
         <FiArrowRight className="text-[20px]" />
       </span>
-    </button>
+    </a>
   )
 }
