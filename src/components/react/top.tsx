@@ -47,14 +47,14 @@ export function Top(){
       w-full fixed left-0 right-0 flex justify-center z-50
     `}>
       <div className={
-        `w-full bg-white/20 backdrop-blur-sm max-w-[998px] flex justify-between px-5 py-4
+        `w-full bg-white/20 backdrop-blur-sm max-w-[998px] flex justify-between px-4 py-4
         ${cls(isOpen, "h-screen bg-white/80 flex-col justify-start gap-[30px]")}`
       }>
         <div className={`
-          font-bold flex gap-[20px] justify-start items-center
+          font-bold flex gap-[20px] justify-start items-center md:w-full md:justify-between
         `}>
-          { isOpen ? <CloseButton /> : <OpenButton />  }
           <img src="/images/logo.svg" className="w-auto h-[20px]" />
+          { isOpen ? <CloseButton /> : <OpenButton />  }
         </div>
 
         <div className={`
@@ -63,17 +63,17 @@ export function Top(){
         `}>
           <a className={`
             text-sm hover:underline
-            ${cls(isOpen, "text-[20px] border-b border-black/20 w-full pb-[15px]")}
+            ${cls(isOpen, "text-[24px] border-b border-black/20 w-full pb-[15px]")}
           `} href="#"> First </a>
 
           <a className={`
             text-sm hover:underline
-            ${cls(isOpen, "text-[20px] border-b border-black/20 w-full pb-[15px]")}
+            ${cls(isOpen, "text-[24px] border-b border-black/20 w-full pb-[15px]")}
           `} href="#"> Second </a>
 
           <a className={`
             text-sm hover:underline
-            ${cls(isOpen, "text-[20px] border-b border-black/20 w-full pb-[15px]")}
+            ${cls(isOpen, "text-[24px] border-b border-black/20 w-full pb-[15px]")}
           `} href="#"> Third </a>
         </div>
       </div>
