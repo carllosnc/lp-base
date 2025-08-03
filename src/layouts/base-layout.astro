@@ -1,0 +1,61 @@
+---
+import './src/styles/global.css'
+import Footer from '../components/footer.astro'
+import { Top } from '../components/react/top'
+
+const { title } = Astro.props
+---
+
+<html lang="en">
+	<head>
+		<!-- Basic Meta Tags -->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title> {title} | Brand Name</title>
+		<meta name="description" content="A compelling and keyword-rich description of your page content in 150-160 characters. This appears in search results.">
+
+		<!-- Font family -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+		<!-- Open Graph Meta Tags (for social sharing) -->
+		<meta property="og:title" content="Your Page Title">
+		<meta property="og:description" content="A compelling description for social media sharing.">
+		<meta property="og:image" content="/og.jpg">
+		<meta property="og:url" content="https://www.yourwebsite.com/page-url">
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="Your Brand Name">
+
+		<!-- Twitter Card Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Your Page Title">
+		<meta name="twitter:description" content="A compelling description for Twitter sharing.">
+		<meta name="twitter:image" content="/og.jpg">
+
+		<!-- Additional SEO Meta Tags -->
+		<meta name="robots" content="index, follow">
+		<meta name="author" content="Your Name or Company">
+		<meta name="keywords" content="keyword1, keyword2, keyword3">
+
+		<!-- Less important than in the past but still used -->
+		<link rel="canonical" href="https://www.yourwebsite.com/page-url">
+
+		<!-- Favicon (not strictly SEO but important for branding) -->
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+		<!-- Language and Locale -->
+		<meta name="language" content="English">
+		<meta http-equiv="content-language" content="en-US">
+	</head>
+	<body class="inter-family w-full">
+		<main class="w-full min-h-screen flex justify-center overflow-x-hidden bg-white">
+			<div class="relative w-full max-w-[1000px] border-x border-neutral-200">
+				<Top client:load />
+        <slot />
+				<Footer />
+			</div>
+		</main>
+	</body>
+</html>
