@@ -49,13 +49,11 @@ const { title } = Astro.props
 		<meta name="language" content="English">
 		<meta http-equiv="content-language" content="en-US">
 	</head>
-	<body class="inter-family w-full">
-		<main class="w-full min-h-screen flex justify-center overflow-x-hidden bg-white">
-			<div class="relative w-full max-w-[1000px] border-x border-neutral-200">
-				<Top client:load />
-        <slot />
-				<Footer />
-			</div>
+	<body class="inter-family w-full root">
+		<main class="w-full min-h-screen flex flex-col justify-between overflow-x-hidden bg-white">
+			<Top client:load />
+			<slot />
+			<Footer />
 		</main>
 	</body>
 </html>
