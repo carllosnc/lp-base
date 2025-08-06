@@ -14,6 +14,16 @@
   --color-deep-sea-950: #082621;
 }
 
+@custom-variant 2xl (@media (max-width: 1535px));
+@custom-variant xl (@media (max-width: 1279px));
+@custom-variant lg (@media (max-width: 1023px));
+@custom-variant md (@media (max-width: 767px));
+@custom-variant sm (@media (max-width: 639px));
+
+.root {
+  isolation: isolate;
+}
+
 .inter-family {
   font-family: "Inter", sans-serif;
 }
@@ -38,13 +48,6 @@
 @keyframes scroll-watcher {
   to { scale: 1 1; }
 }
-
-@custom-variant 2xl (@media (max-width: 1535px));
-@custom-variant xl (@media (max-width: 1279px));
-@custom-variant lg (@media (max-width: 1023px));
-@custom-variant md (@media (max-width: 767px));
-@custom-variant sm (@media (max-width: 639px));
-
 
 @layer utilities {
   @keyframes scroll {
@@ -79,4 +82,15 @@
   .animate-scroll-fast:hover {
     animation-play-state: paused;
   }
+}
+
+.button {
+    @apply
+    px-6
+    py-[10px]
+    bg-black
+    text-white
+    rounded-full
+    transition-all
+    hover:bg-neutral-800
 }
