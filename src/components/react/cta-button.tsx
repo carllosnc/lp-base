@@ -26,19 +26,19 @@ export function CtaButton({
   const sizeClasses = {
     normal: {
       button: "h-12",
-      padding: "p-[4px]",
+      padding: "p-[2px]",
       text: "text-sm",
       innerPadding: "px-8 py-1",
     },
     big: {
       button: "h-14",
-      padding: "p-[5px]",
+      padding: "p-[2px]",
       text: "text-base",
       innerPadding: "px-10 py-2",
     },
     bigger: {
       button: "h-16",
-      padding: "p-[6px]",
+      padding: "p-[2px]",
       text: "text-lg",
       innerPadding: "px-12 py-3",
     },
