@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 import { FiMenu, FiX } from "react-icons/fi"
-import { Image } from 'astro:assets';
 
 export function Top(){
   const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -44,11 +43,11 @@ export function Top(){
 
   return (
     <nav className={`
-      w-full fixed left-0 right-0 flex justify-center z-50
+      w-full fixed left-0 right-0 bg-black/10 backdrop-blur-sm flex justify-center z-50
     `}>
       <div className={
-        `w-full bg-white/20 backdrop-blur-sm max-w-[998px] flex justify-between px-4 py-4
-        ${cls(isOpen, "h-screen bg-white/80 flex-col justify-start gap-[30px]")}`
+        `w-full max-w-[1100px] flex justify-between px-4 py-4
+        ${cls(isOpen, "h-screen flex-col justify-start gap-[30px]")}`
       }>
         <div className={`
           font-bold flex gap-[20px] justify-start items-center md:w-full md:justify-between
